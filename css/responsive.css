@@ -1,0 +1,209 @@
+/* ==========================================================================
+   RESPONSIVE
+   TRS+ Bolivia Corporate Platform
+   Media queries ONLY. No component logic here.
+   Mobile → Tablet → Desktop (mobile-first)
+   Breakpoints: Mobile <768px | Tablet 768px-1024px | Desktop >1024px
+   ========================================================================== */
+
+
+/* ==========================================================================
+   TABLET — 768px and above
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+  /* Container */
+  .container {
+    padding-inline: var(--space-12);
+  }
+
+  /* Hero */
+  .hero__headline {
+    font-size: var(--text-h1);
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* ==========================================================================
+   DESKTOP — 1024px and above
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+
+  /* Navbar — show desktop nav, hide hamburger */
+  .navbar__nav {
+    display: flex;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  /* Hero — 2 columns */
+  .hero__grid {
+    grid-template-columns: 1fr 0.85fr;
+  }
+
+  /* Hero headline full size */
+  .hero__headline {
+    font-size: var(--text-hero);
+  }
+
+  /* Footer — 4 columns */
+  .footer__top {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+
+}
+
+
+/* ==========================================================================
+   MOBILE — below 1024px
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+
+  /* Navbar — hide desktop nav, show hamburger */
+  .navbar__nav {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Hero — single column */
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__visual {
+    display: none;
+  }
+
+  .hero__headline {
+    font-size: var(--text-h1);
+    max-width: 100%;
+  }
+
+  .hero__description {
+    font-size: var(--text-body);
+  }
+
+}
+
+
+/* ==========================================================================
+   MOBILE — below 768px
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  /* Container */
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  /* Typography */
+  .hero__headline {
+    font-size: var(--text-h2);
+  }
+
+  /* Sections */
+  .section {
+    padding-block: var(--space-16);
+  }
+
+  .section--lg {
+    padding-block: var(--space-20);
+  }
+
+  /* Section header */
+  .section-header__description {
+    font-size: var(--text-body);
+  }
+
+  /* Hero trust — scroll horizontally on very small screens */
+  .hero__trust {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .hero__trust::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trust-card {
+    flex-shrink: 0;
+  }
+
+  /* Buttons */
+  .btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn--lg {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Grids */
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==========================================================================
+   EXTRA SMALL — below 480px
+   ========================================================================== */
+
+@media (max-width: 479px) {
+
+  .hero__headline {
+    font-size: var(--text-h3);
+  }
+
+  .navbar__logo-text span {
+    display: none;
+  }
+
+}
+
+
+/* ==========================================================================
+   LARGE DESKTOP — 1440px and above
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+
+  .container {
+    padding-inline: var(--space-12);
+  }
+
+}

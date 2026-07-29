@@ -1,0 +1,132 @@
+/* ==========================================================================
+   LAYOUT
+   TRS+ Bolivia Corporate Platform
+   Container, Grid, Spacing, Positioning utilities
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+}
+
+.container--narrow {
+  max-width: var(--content-max);
+}
+
+.container--section {
+  max-width: var(--section-max);
+}
+
+/* --------------------------------------------------------------------------
+   Section Structure
+   Every section follows: container > section-header > section-content
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: var(--space-24);
+}
+
+.section--lg {
+  padding-block: var(--space-30);
+}
+
+.section--sm {
+  padding-block: var(--space-16);
+}
+
+/* --------------------------------------------------------------------------
+   Section Header
+   Badge → Title → Supporting Paragraph → Optional CTA
+   -------------------------------------------------------------------------- */
+.section-header {
+  margin-bottom: var(--space-16);
+  max-width: var(--content-max);
+}
+
+.section-header--center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.section-header__badge {
+  margin-bottom: var(--space-4);
+}
+
+.section-header__title {
+  margin-bottom: var(--space-4);
+}
+
+.section-header__description {
+  color: var(--color-gray-500);
+  font-size: var(--text-body-xl);
+  max-width: 60ch;
+}
+
+.section-header--center .section-header__description {
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Grid System
+   -------------------------------------------------------------------------- */
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.grid--hero {
+  grid-template-columns: 1fr 0.85fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   Flex Utilities
+   -------------------------------------------------------------------------- */
+.flex         { display: flex; }
+.flex-center  { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-col     { display: flex; flex-direction: column; }
+.flex-wrap    { flex-wrap: wrap; }
+.gap-2        { gap: var(--space-2); }
+.gap-3        { gap: var(--space-3); }
+.gap-4        { gap: var(--space-4); }
+.gap-6        { gap: var(--space-6); }
+.gap-8        { gap: var(--space-8); }
+
+/* --------------------------------------------------------------------------
+   Spacing Utilities
+   -------------------------------------------------------------------------- */
+.mt-2  { margin-top: var(--space-2); }
+.mt-4  { margin-top: var(--space-4); }
+.mt-6  { margin-top: var(--space-6); }
+.mt-8  { margin-top: var(--space-8); }
+.mt-12 { margin-top: var(--space-12); }
+.mt-16 { margin-top: var(--space-16); }
+
+.mb-4  { margin-bottom: var(--space-4); }
+.mb-6  { margin-bottom: var(--space-6); }
+.mb-8  { margin-bottom: var(--space-8); }
+
+/* --------------------------------------------------------------------------
+   Visibility
+   -------------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

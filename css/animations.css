@@ -1,0 +1,264 @@
+/* ==========================================================================
+   ANIMATIONS
+   TRS+ Bolivia Corporate Platform
+   Only animation and transition definitions.
+   All properties animate GPU-friendly: opacity, transform, scale, translate.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   KEYFRAMES
+   ========================================================================== */
+
+/* Fade Up — Section Reveal */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Fade Down */
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating vertical — for cards and badges */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Pulse dot — for status indicators */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Glow pulse — for accent elements */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(102, 199, 255, 0.20); }
+  50%       { box-shadow: 0 0 24px rgba(102, 199, 255, 0.45); }
+}
+
+/* Scale in */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Counter count up — JS-driven, animation only */
+@keyframes counter-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==========================================================================
+   HERO — Entry Sequence
+   Staggered animation: Navbar → Badge → Headline → Text → CTAs → Image → Trust
+   ========================================================================== */
+
+/* Items start invisible */
+.hero-anim-badge,
+.hero-anim-headline,
+.hero-anim-description,
+.hero-anim-cta,
+.hero-anim-trust,
+.hero-anim-visual {
+  opacity: 0;
+}
+
+/* Activated after JS sets .hero--loaded */
+.hero--loaded .hero-anim-badge {
+  animation: fade-up var(--duration-reveal) var(--ease-out) 0.15s forwards;
+}
+
+.hero--loaded .hero-anim-headline {
+  animation: fade-up var(--duration-reveal) var(--ease-out) 0.30s forwards;
+}
+
+.hero--loaded .hero-anim-description {
+  animation: fade-up var(--duration-reveal) var(--ease-out) 0.45s forwards;
+}
+
+.hero--loaded .hero-anim-cta {
+  animation: fade-up var(--duration-reveal) var(--ease-out) 0.58s forwards;
+}
+
+.hero--loaded .hero-anim-trust {
+  animation: fade-up var(--duration-reveal) var(--ease-out) 0.70s forwards;
+}
+
+.hero--loaded .hero-anim-visual {
+  animation: scale-in var(--duration-reveal) var(--ease-out) 0.40s forwards;
+}
+
+
+/* ==========================================================================
+   NAVBAR — Entry
+   ========================================================================== */
+
+.navbar {
+  animation: fade-down var(--duration-slow) var(--ease-out) 0.05s both;
+}
+
+
+/* ==========================================================================
+   SECTION REVEAL
+   Controlled by IntersectionObserver in animation.js
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--duration-reveal) var(--ease-out),
+              transform var(--duration-reveal) var(--ease-out);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-reveal) var(--ease-out),
+              transform var(--duration-reveal) var(--ease-out);
+}
+
+.reveal-stagger--visible > *:nth-child(1) { transition-delay: 0ms;    opacity: 1; transform: none; }
+.reveal-stagger--visible > *:nth-child(2) { transition-delay: 80ms;   opacity: 1; transform: none; }
+.reveal-stagger--visible > *:nth-child(3) { transition-delay: 160ms;  opacity: 1; transform: none; }
+.reveal-stagger--visible > *:nth-child(4) { transition-delay: 240ms;  opacity: 1; transform: none; }
+.reveal-stagger--visible > *:nth-child(5) { transition-delay: 320ms;  opacity: 1; transform: none; }
+.reveal-stagger--visible > *:nth-child(6) { transition-delay: 400ms;  opacity: 1; transform: none; }
+
+
+/* ==========================================================================
+   FLOATING ELEMENTS
+   Subtle vertical float for trust cards and dashboard
+   ========================================================================== */
+
+.float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+/* Stagger float start */
+.float-delay-1 { animation-delay: 0.5s; }
+.float-delay-2 { animation-delay: 1.0s; }
+.float-delay-3 { animation-delay: 1.5s; }
+
+
+/* ==========================================================================
+   DASHBOARD STATUS DOT
+   ========================================================================== */
+
+.op-dashboard__status-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+
+/* ==========================================================================
+   LINK UNDERLINE REVEAL
+   Grows from left to right on hover — applied in components.css
+   ========================================================================== */
+
+/* See .navbar__nav-link::after in components.css */
+
+
+/* ==========================================================================
+   ACCESSIBILITY — prefers-reduced-motion
+   Disable all animations when user prefers reduced motion.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-anim-badge,
+  .hero-anim-headline,
+  .hero-anim-description,
+  .hero-anim-cta,
+  .hero-anim-trust,
+  .hero-anim-visual {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero--loaded .hero-anim-badge,
+  .hero--loaded .hero-anim-headline,
+  .hero--loaded .hero-anim-description,
+  .hero--loaded .hero-anim-cta,
+  .hero--loaded .hero-anim-trust,
+  .hero--loaded .hero-anim-visual {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .float-slow,
+  .float-medium {
+    animation: none;
+  }
+
+  .op-dashboard__status-dot {
+    animation: none;
+  }
+
+  .badge__dot--pulse {
+    animation: none;
+  }
+
+  .navbar {
+    animation: none;
+  }
+
+}
