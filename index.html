@@ -211,6 +211,17 @@
 
       <!-- Background layers -->
       <div class="hero__bg" aria-hidden="true">
+        <!-- Client photo: drop assets/images/hero-operations.webp to activate -->
+        <div class="hero__bg-photo">
+          <img
+            src="assets/images/hero-operations.webp"
+            alt=""
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+            decoding="sync"
+          />
+        </div>
         <div class="hero__bg-gradient"></div>
         <div class="hero__bg-grid"></div>
         <div class="hero__bg-glow"></div>
@@ -326,89 +337,114 @@
 
               <!-- Dashboard Header -->
               <div class="op-dashboard__header">
-                <span class="op-dashboard__title">Panel Operacional</span>
+                <span class="op-dashboard__title">Centro Operacional TRS+</span>
                 <div class="op-dashboard__status">
                   <span class="op-dashboard__status-dot"></span>
-                  Operativo
+                  En línea
                 </div>
+              </div>
+
+              <!-- Bolivia Coverage Map -->
+              <div class="op-dashboard__bolivia-map">
+                <p class="op-dashboard__bolivia-map-title">Cobertura Bolivia — 9 ciudades</p>
+                <svg class="bolivia-svg" viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de Bolivia con cobertura TRS+">
+                  <!-- Bolivia outline (simplified) -->
+                  <path d="M 58,24 L 158,18 L 218,42 L 234,88 L 226,140 L 204,175 L 148,192 L 98,190 L 62,178 L 44,152 L 28,115 L 22,68 Z"
+                        fill="rgba(58, 99, 255, 0.07)"
+                        stroke="rgba(90, 139, 255, 0.25)"
+                        stroke-width="1.5"
+                        stroke-linejoin="round" />
+                  <!-- Connection lines between cities -->
+                  <line x1="52" y1="92" x2="112" y2="112" stroke="rgba(102,199,255,0.12)" stroke-width="1"/>
+                  <line x1="112" y1="112" x2="186" y2="108" stroke="rgba(102,199,255,0.12)" stroke-width="1"/>
+                  <line x1="52" y1="92" x2="72" y2="115" stroke="rgba(102,199,255,0.10)" stroke-width="1"/>
+                  <line x1="72" y1="115" x2="112" y2="112" stroke="rgba(102,199,255,0.10)" stroke-width="1"/>
+                  <line x1="112" y1="112" x2="96" y2="142" stroke="rgba(102,199,255,0.10)" stroke-width="1"/>
+                  <line x1="96" y1="142" x2="112" y2="148" stroke="rgba(102,199,255,0.08)" stroke-width="1"/>
+                  <line x1="112" y1="148" x2="108" y2="172" stroke="rgba(102,199,255,0.08)" stroke-width="1"/>
+                  <!-- City pulse rings (animated) -->
+                  <circle cx="52"  cy="92"  r="6" fill="rgba(102,199,255,0.12)" class="city-pulse"/>
+                  <circle cx="186" cy="108" r="8" fill="rgba(18,183,106,0.12)"  class="city-pulse city-pulse-2"/>
+                  <circle cx="112" cy="112" r="5" fill="rgba(58,99,255,0.15)"   class="city-pulse city-pulse-3"/>
+                  <circle cx="72"  cy="115" r="4" fill="rgba(58,99,255,0.12)"   class="city-pulse city-pulse-4"/>
+                  <circle cx="96"  cy="142" r="4" fill="rgba(58,99,255,0.12)"   class="city-pulse city-pulse-5"/>
+                  <!-- City dots -->
+                  <circle cx="52"  cy="92"  r="4" fill="#66C7FF" opacity="0.95"/> <!-- La Paz -->
+                  <circle cx="186" cy="108" r="5" fill="#12B76A" opacity="0.95"/> <!-- Santa Cruz -->
+                  <circle cx="112" cy="112" r="3.5" fill="#3A63FF" opacity="0.90"/> <!-- Cochabamba -->
+                  <circle cx="72"  cy="115" r="3" fill="#3A63FF" opacity="0.80"/> <!-- Oruro -->
+                  <circle cx="96"  cy="142" r="3" fill="#3A63FF" opacity="0.80"/> <!-- Potosí -->
+                  <circle cx="112" cy="148" r="3" fill="#3A63FF" opacity="0.75"/> <!-- Sucre -->
+                  <circle cx="108" cy="172" r="2.5" fill="#3A63FF" opacity="0.70"/> <!-- Tarija -->
+                  <circle cx="142" cy="65"  r="2.5" fill="#3A63FF" opacity="0.65"/> <!-- Trinidad -->
+                  <circle cx="48"  cy="35"  r="2"   fill="#3A63FF" opacity="0.55"/> <!-- Cobija -->
+                  <!-- City labels -->
+                  <text x="58"  y="90"  font-size="7" fill="rgba(255,255,255,0.55)" font-family="monospace">La Paz</text>
+                  <text x="192" y="106" font-size="7" fill="rgba(255,255,255,0.55)" font-family="monospace">Sto. Cruz</text>
+                  <text x="117" y="110" font-size="7" fill="rgba(255,255,255,0.45)" font-family="monospace">Cbba.</text>
+                </svg>
               </div>
 
               <!-- Key Stats -->
               <div class="op-dashboard__stats">
                 <div class="op-stat">
                   <span class="op-stat__value op-stat__value--accent"
-                        data-counter="47"
-                        data-suffix="">
-                    47
-                  </span>
+                        data-counter="47" data-suffix="">47</span>
                   <span class="op-stat__label">Operaciones</span>
                 </div>
                 <div class="op-stat">
                   <span class="op-stat__value op-stat__value--success"
-                        data-counter="98.5"
-                        data-suffix="%">
-                    98.5%
-                  </span>
+                        data-counter="98.5" data-suffix="%">98.5%</span>
                   <span class="op-stat__label">Uptime</span>
                 </div>
                 <div class="op-stat">
                   <span class="op-stat__value"
-                        data-counter="9"
-                        data-suffix="">
-                    9
-                  </span>
+                        data-counter="9" data-suffix="">9</span>
                   <span class="op-stat__label">Ciudades</span>
                 </div>
               </div>
 
-              <!-- Active Services -->
-              <div class="op-dashboard__services">
+              <!-- GPS Feed -->
+              <div class="op-gps-feed">
 
-                <div class="op-service-row">
-                  <span class="op-service-row__name">Logística</span>
-                  <div class="op-service-row__bar-wrap">
-                    <div class="op-service-row__bar op-service-row__bar--1"></div>
+                <div class="op-gps-item">
+                  <span class="op-gps-indicator op-gps-indicator--active"></span>
+                  <div class="op-gps-unit">
+                    TRS-MTO-017
+                    <span>La Paz → El Alto · Logística</span>
                   </div>
-                  <span class="op-service-row__pct">92%</span>
+                  <span class="op-gps-time">12:04</span>
                 </div>
 
-                <div class="op-service-row">
-                  <span class="op-service-row__name">Transporte</span>
-                  <div class="op-service-row__bar-wrap">
-                    <div class="op-service-row__bar op-service-row__bar--2"></div>
+                <div class="op-gps-item">
+                  <span class="op-gps-indicator op-gps-indicator--transit"></span>
+                  <div class="op-gps-unit">
+                    TRS-SEC-032
+                    <span>Santa Cruz · Seguridad</span>
                   </div>
-                  <span class="op-service-row__pct">87%</span>
+                  <span class="op-gps-time">11:58</span>
                 </div>
 
-                <div class="op-service-row">
-                  <span class="op-service-row__name">Seguridad</span>
-                  <div class="op-service-row__bar-wrap">
-                    <div class="op-service-row__bar op-service-row__bar--3"></div>
+                <div class="op-gps-item">
+                  <span class="op-gps-indicator op-gps-indicator--active"></span>
+                  <div class="op-gps-unit">
+                    TRS-TRP-008
+                    <span>Cochabamba · Transporte</span>
                   </div>
-                  <span class="op-service-row__pct">100%</span>
+                  <span class="op-gps-time">11:47</span>
                 </div>
 
-                <div class="op-service-row">
-                  <span class="op-service-row__name">Outsourcing</span>
-                  <div class="op-service-row__bar-wrap">
-                    <div class="op-service-row__bar op-service-row__bar--4"></div>
+                <div class="op-gps-item">
+                  <span class="op-gps-indicator op-gps-indicator--idle"></span>
+                  <div class="op-gps-unit">
+                    TRS-OUT-021
+                    <span>Oruro · Outsourcing</span>
                   </div>
-                  <span class="op-service-row__pct">78%</span>
+                  <span class="op-gps-time">11:30</span>
                 </div>
 
               </div>
-
-              <!-- Coverage indicator -->
-              <div class="op-dashboard__map">
-                <span class="op-dashboard__map-label">Cobertura Bolivia</span>
-                <div class="op-dashboard__map-dots" aria-hidden="true">
-                  <span class="op-dashboard__map-dot"></span>
-                  <span class="op-dashboard__map-dot"></span>
-                  <span class="op-dashboard__map-dot"></span>
-                  <span class="op-dashboard__map-dot"></span>
-                  <span class="op-dashboard__map-dot"></span>
-                </div>
-              </div>
+              <!-- /op-gps-feed -->
 
             </div>
             <!-- /op-dashboard -->
@@ -420,8 +456,770 @@
       </div>
       <!-- /hero__container -->
 
+      <!-- Scroll hint -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Descubrir</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+
     </section>
     <!-- /hero -->
+
+    <!-- ======================================================================
+         TRUST FEATURES SECTION
+         ====================================================================== -->
+    <section class="trust-section" id="confianza" aria-labelledby="trust-title">
+      <div class="container">
+
+        <header class="section-header section-header--center reveal">
+          <div class="section-header__badge">
+            <span class="badge badge--outline">¿Por qué TRS+?</span>
+          </div>
+          <h2 class="section-header__title" id="trust-title">
+            Operaciones que no se detienen
+          </h2>
+          <p class="section-header__description">
+            Cada solución TRS+ está diseñada para que su empresa opere con
+            máxima eficiencia, cobertura y seguridad.
+          </p>
+        </header>
+
+        <div class="feature-grid reveal-stagger">
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">24/7</div>
+            <h3 class="feature-card__title">Disponibilidad Continua</h3>
+            <p class="feature-card__description">Operaciones ininterrumpidas los 365 días del año. Nuestro equipo está disponible cuando usted lo necesita.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">9+</div>
+            <h3 class="feature-card__title">Ciudades con Cobertura</h3>
+            <p class="feature-card__description">Presencia operacional en los principales centros económicos y comerciales de Bolivia.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">100%</div>
+            <h3 class="feature-card__title">Operaciones Aseguradas</h3>
+            <p class="feature-card__description">Toda operación cubierta con seguro corporativo. Su carga, activos y personal protegidos en todo momento.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">98.5%</div>
+            <h3 class="feature-card__title">Uptime Operacional</h3>
+            <p class="feature-card__description">Índice de disponibilidad verificado. Procesos robustos que garantizan continuidad ante cualquier contingencia.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">GPS</div>
+            <h3 class="feature-card__title">Monitoreo en Tiempo Real</h3>
+            <p class="feature-card__description">Trazabilidad completa de cada unidad, operación y recurso mediante tecnología GPS y plataformas de monitoreo.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">Corp.</div>
+            <h3 class="feature-card__title">Soporte Corporativo</h3>
+            <p class="feature-card__description">Equipo especializado en soluciones corporativas. Gestionamos la complejidad operacional para que usted pueda crecer.</p>
+          </article>
+
+        </div>
+        <!-- /feature-grid -->
+
+      </div>
+    </section>
+    <!-- /trust-section -->
+
+    <hr class="section-divider" aria-hidden="true" />
+
+    <!-- ======================================================================
+         ABOUT TRS+ SECTION
+         ====================================================================== -->
+    <section class="about-section" id="empresa" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about__layout">
+
+          <!-- Image column -->
+          <div class="about__image-col reveal">
+            <div class="about__image-frame">
+              <!-- Client image: drop assets/images/about-operations.webp to activate -->
+              <img
+                src="assets/images/about-operations.webp"
+                alt="Equipo TRS+ Bolivia en operaciones corporativas"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+              <!-- Placeholder shown when image is not yet provided -->
+              <div class="about__image-placeholder" aria-hidden="true">
+                <div class="about__image-placeholder-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <circle cx="8" cy="9" r="1.5"/>
+                    <path d="M21 17l-5-5L10 17"/>
+                    <path d="M14 12l-3 3"/>
+                  </svg>
+                </div>
+                <span class="about__image-placeholder-text">Foto TRS+ Bolivia</span>
+              </div>
+            </div>
+            <!-- Floating stat badge -->
+            <div class="about__image-stat" aria-label="Años de experiencia operacional">
+              <span class="about__image-stat-value">15+</span>
+              <span class="about__image-stat-label">Años de<br/>experiencia</span>
+            </div>
+            <div class="about__image-accent" aria-hidden="true"></div>
+          </div>
+
+          <!-- Content column -->
+          <div class="about__content-col reveal">
+
+            <header class="section-header">
+              <div class="section-header__badge">
+                <span class="badge badge--outline">Quiénes Somos</span>
+              </div>
+              <h2 class="section-header__title" id="about-title">
+                Su socio estratégico en continuidad operacional
+              </h2>
+            </header>
+
+            <p class="about__lead">
+              TRS+ Bolivia SRL no es una empresa de transporte ni de outsourcing.
+              Somos un socio estratégico especializado en continuidad operacional,
+              diseñado para empresas que no pueden permitirse detenerse.
+            </p>
+
+            <div class="about__pillars">
+
+              <div class="about__pillar">
+                <span class="about__pillar-label">Misión</span>
+                <p class="about__pillar-text">Optimizar las operaciones de nuestros clientes a través de soluciones integradas, confiables y tecnológicamente avanzadas.</p>
+              </div>
+
+              <div class="about__pillar">
+                <span class="about__pillar-label">Visión</span>
+                <p class="about__pillar-text">Ser la empresa de soluciones operacionales más confiable de Bolivia, reconocida por su excelencia y capacidad de ejecución.</p>
+              </div>
+
+              <div class="about__pillar">
+                <span class="about__pillar-label">Compromiso</span>
+                <p class="about__pillar-text">Entregamos resultados medibles. Cada operación se planifica, ejecuta y reporta con estándares corporativos de primer nivel.</p>
+              </div>
+
+              <div class="about__pillar">
+                <span class="about__pillar-label">Valores</span>
+                <p class="about__pillar-text">Confiabilidad, eficiencia, transparencia y excelencia operacional guían cada decisión que tomamos por nuestros clientes.</p>
+              </div>
+
+            </div>
+
+            <div class="btn-group">
+              <a href="empresa.html" class="btn btn--primary">Conocer más sobre TRS+</a>
+              <a href="contacto.html" class="btn btn--secondary">Hablar con un especialista</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /about-section -->
+
+    <!-- ======================================================================
+         SERVICES PREVIEW SECTION
+         ====================================================================== -->
+    <section class="services-section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+
+        <header class="section-header section-header--center reveal">
+          <div class="section-header__badge">
+            <span class="badge badge--outline">Nuestros Servicios</span>
+          </div>
+          <h2 class="section-header__title" id="services-title">
+            Soluciones integradas para su empresa
+          </h2>
+          <p class="section-header__description">
+            Desde logística hasta seguridad operacional: diseñamos y ejecutamos
+            soluciones que protegen y hacen crecer su negocio.
+          </p>
+        </header>
+
+        <div class="services-grid reveal-stagger">
+
+          <article class="service-card service-card--featured">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="1"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Logística Corporativa</h3>
+            <p class="service-card__description">Diseño, planificación y ejecución de cadenas logísticas eficientes. Movemos sus activos con precisión, trazabilidad y cumplimiento.</p>
+            <a href="servicios.html#logistica" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Transporte Especializado</h3>
+            <p class="service-card__description">Flota corporativa para transporte de personal, carga especial y operaciones en zonas remotas o de difícil acceso.</p>
+            <a href="servicios.html#transporte" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Seguridad Operacional</h3>
+            <p class="service-card__description">Protección integral de activos, personal e instalaciones. Seguridad privada, monitoreo y protocolos de respuesta inmediata.</p>
+            <a href="servicios.html#seguridad" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Outsourcing Corporativo</h3>
+            <p class="service-card__description">Gestión integral de funciones operacionales no core: administración de personal, servicios generales y soporte especializado.</p>
+            <a href="servicios.html#outsourcing" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Monitoreo GPS</h3>
+            <p class="service-card__description">Plataforma de rastreo y monitoreo en tiempo real para flotas, activos y operaciones. Visibilidad completa desde cualquier dispositivo.</p>
+            <a href="servicios.html#monitoreo" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M8.46 8.46a5 5 0 0 0 0 7.07"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Gestión de Flota</h3>
+            <p class="service-card__description">Administración completa de flotas vehiculares: mantenimiento, documentación, control de combustible y optimización de rutas.</p>
+            <a href="servicios.html#flota" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+        <!-- /services-grid -->
+
+        <div class="services-section__footer">
+          <a href="servicios.html" class="btn btn--secondary btn--lg">
+            Ver todos los servicios
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- /services-section -->
+
+    <!-- ======================================================================
+         INDUSTRIES SECTION
+         ====================================================================== -->
+    <section class="industries-section" id="sectores" aria-labelledby="industries-title">
+      <div class="container">
+
+        <header class="section-header section-header--center reveal">
+          <div class="section-header__badge">
+            <span class="badge badge--glass">Sectores</span>
+          </div>
+          <h2 class="section-header__title" id="industries-title">
+            Industrias que confían en TRS+
+          </h2>
+          <p class="section-header__description">
+            Presencia en los sectores más exigentes de Bolivia.
+            Experiencia que se traduce en soluciones adaptadas a cada industria.
+          </p>
+        </header>
+
+        <div class="industries-grid reveal-stagger">
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Banca y Finanzas</h3>
+            <p class="industry-card__description">Transporte de valores, seguridad bancaria y logística especializada para el sector financiero.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Minería</h3>
+            <p class="industry-card__description">Soporte operacional completo para proyectos mineros en zonas remotas: logística, transporte y seguridad.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Retail y Comercio</h3>
+            <p class="industry-card__description">Distribución, cadena de frío, outsourcing comercial y seguridad para cadenas de retail a nivel nacional.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Gobierno e Instituciones</h3>
+            <p class="industry-card__description">Servicios de apoyo operacional, transporte institucional y logística para entidades gubernamentales y públicas.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Salud</h3>
+            <p class="industry-card__description">Transporte especializado de equipos médicos, cadena de frío farmacéutica y logística hospitalaria.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Manufactura</h3>
+            <p class="industry-card__description">Gestión de supply chain, distribución industrial y soporte operacional para plantas de manufactura.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="3" x2="9" y2="21"/>
+                <line x1="15" y1="3" x2="15" y2="21"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="3" y1="15" x2="21" y2="15"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Construcción</h3>
+            <p class="industry-card__description">Transporte de maquinaria pesada, materiales de construcción y personal en proyectos de infraestructura.</p>
+          </article>
+
+          <article class="industry-card">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22V12"/>
+                <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
+                <circle cx="12" cy="5" r="3"/>
+                <path d="M6.168 18.849a4 4 0 0 0 11.664 0"/>
+              </svg>
+            </div>
+            <h3 class="industry-card__name">Agro-industria</h3>
+            <p class="industry-card__description">Logística agroindustrial, transporte de cosechas, cadena de frío y distribución de insumos del agro.</p>
+          </article>
+
+        </div>
+        <!-- /industries-grid -->
+
+      </div>
+    </section>
+    <!-- /industries-section -->
+
+    <!-- ======================================================================
+         TECHNOLOGY SECTION
+         ====================================================================== -->
+    <section class="tech-section" id="tecnologia" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="tech-layout">
+
+          <!-- Left — Feature list -->
+          <div class="reveal">
+
+            <header class="section-header">
+              <div class="section-header__badge">
+                <span class="badge badge--outline">Tecnología</span>
+              </div>
+              <h2 class="section-header__title" id="tech-title">
+                Tecnología al servicio de sus operaciones
+              </h2>
+              <p class="section-header__description">
+                Plataformas y sistemas operacionales que dan visibilidad, control
+                y trazabilidad en tiempo real a todo su negocio.
+              </p>
+            </header>
+
+            <div class="tech-feature-list">
+
+              <div class="tech-feature">
+                <div class="tech-feature__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="tech-feature__body">
+                  <h3 class="tech-feature__title">Rastreo GPS en Tiempo Real</h3>
+                  <p class="tech-feature__desc">Localización continua de flotas y activos con actualizaciones cada 30 segundos desde cualquier dispositivo.</p>
+                </div>
+              </div>
+
+              <div class="tech-feature">
+                <div class="tech-feature__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="1" y="3" width="15" height="13" rx="1"/>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                  </svg>
+                </div>
+                <div class="tech-feature__body">
+                  <h3 class="tech-feature__title">Gestión de Flota</h3>
+                  <p class="tech-feature__desc">Control integral: mantenimiento preventivo, consumo de combustible, documentación y optimización de rutas.</p>
+                </div>
+              </div>
+
+              <div class="tech-feature">
+                <div class="tech-feature__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <div class="tech-feature__body">
+                  <h3 class="tech-feature__title">Centro de Monitoreo 24/7</h3>
+                  <p class="tech-feature__desc">Sala de control operacional con operadores especializados monitoreando cada evento en tiempo real.</p>
+                </div>
+              </div>
+
+              <div class="tech-feature">
+                <div class="tech-feature__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                  </svg>
+                </div>
+                <div class="tech-feature__body">
+                  <h3 class="tech-feature__title">Reportes y Analytics</h3>
+                  <p class="tech-feature__desc">Paneles de control con KPIs operacionales, reportes automáticos y métricas de desempeño personalizables.</p>
+                </div>
+              </div>
+
+              <div class="tech-feature">
+                <div class="tech-feature__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+                <div class="tech-feature__body">
+                  <h3 class="tech-feature__title">Trazabilidad Completa</h3>
+                  <p class="tech-feature__desc">Registro inmutable de cada evento operacional: origen, destino, tiempos, responsables y condiciones de entrega.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right — Tech Panel -->
+          <div class="reveal">
+            <div class="tech-panel">
+
+              <div class="tech-panel__header">
+                <span class="tech-panel__title">Sistema TRS+ Live</span>
+                <span class="tech-panel__live">En línea</span>
+              </div>
+
+              <!-- Bolivia Map -->
+              <div class="tech-panel__map-area">
+                <svg class="bolivia-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa operacional de Bolivia">
+                  <!-- Grid lines -->
+                  <defs>
+                    <pattern id="map-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(90,139,255,0.08)" stroke-width="0.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="280" height="200" fill="url(#map-grid)"/>
+                  <!-- Bolivia outline -->
+                  <path d="M 58,20 L 158,14 L 218,38 L 234,85 L 226,138 L 204,174 L 148,190 L 98,188 L 62,176 L 44,150 L 26,112 L 22,65 Z"
+                        fill="rgba(58,99,255,0.08)" stroke="rgba(90,139,255,0.30)" stroke-width="1.5" stroke-linejoin="round"/>
+                  <!-- Connection network lines -->
+                  <line x1="52" y1="90" x2="112" y2="110" stroke="rgba(102,199,255,0.15)" stroke-width="1" stroke-dasharray="3 2"/>
+                  <line x1="112" y1="110" x2="185" y2="106" stroke="rgba(102,199,255,0.15)" stroke-width="1" stroke-dasharray="3 2"/>
+                  <line x1="52" y1="90" x2="72" y2="113" stroke="rgba(102,199,255,0.10)" stroke-width="1" stroke-dasharray="3 2"/>
+                  <line x1="72" y1="113" x2="112" y2="110" stroke="rgba(102,199,255,0.10)" stroke-width="1" stroke-dasharray="3 2"/>
+                  <line x1="112" y1="110" x2="96" y2="140" stroke="rgba(102,199,255,0.10)" stroke-width="1" stroke-dasharray="3 2"/>
+                  <!-- City pulse rings -->
+                  <circle cx="52" cy="90" r="7" fill="rgba(102,199,255,0.10)" class="city-pulse"/>
+                  <circle cx="185" cy="106" r="9" fill="rgba(18,183,106,0.10)" class="city-pulse city-pulse-2"/>
+                  <circle cx="112" cy="110" r="6" fill="rgba(58,99,255,0.12)" class="city-pulse city-pulse-3"/>
+                  <!-- City dots — main -->
+                  <circle cx="52"  cy="90"  r="5" fill="#66C7FF"/>
+                  <circle cx="185" cy="106" r="6" fill="#12B76A"/>
+                  <circle cx="112" cy="110" r="4" fill="#3A63FF"/>
+                  <circle cx="72"  cy="113" r="3" fill="#3A63FF" opacity="0.80"/>
+                  <circle cx="96"  cy="140" r="3" fill="#3A63FF" opacity="0.75"/>
+                  <circle cx="112" cy="146" r="3" fill="#3A63FF" opacity="0.70"/>
+                  <circle cx="108" cy="168" r="2.5" fill="#3A63FF" opacity="0.65"/>
+                  <circle cx="140" cy="62"  r="2.5" fill="#3A63FF" opacity="0.60"/>
+                  <circle cx="48"  cy="33"  r="2"   fill="#3A63FF" opacity="0.50"/>
+                  <!-- Labels -->
+                  <text x="59"  y="88"  font-size="7.5" fill="rgba(255,255,255,0.60)" font-family="monospace" font-weight="500">La Paz</text>
+                  <text x="193" y="104" font-size="7.5" fill="rgba(255,255,255,0.60)" font-family="monospace" font-weight="500">Sta. Cruz</text>
+                  <text x="118" y="108" font-size="7"   fill="rgba(255,255,255,0.45)" font-family="monospace">Cbba.</text>
+                </svg>
+              </div>
+
+              <!-- GPS Feed -->
+              <div class="tech-panel__gps-feed">
+
+                <div class="gps-feed-item">
+                  <span class="gps-feed-item__dot gps-feed-item__dot--active"></span>
+                  <div class="gps-feed-item__info">
+                    <span class="gps-feed-item__name">TRS-MTO-017 — Activo</span>
+                    <span class="gps-feed-item__sub">La Paz → El Alto · Logística Corporativa</span>
+                  </div>
+                  <span class="gps-feed-item__timestamp">12:04</span>
+                </div>
+
+                <div class="gps-feed-item">
+                  <span class="gps-feed-item__dot gps-feed-item__dot--transit"></span>
+                  <div class="gps-feed-item__info">
+                    <span class="gps-feed-item__name">TRS-SEC-032 — En tránsito</span>
+                    <span class="gps-feed-item__sub">Santa Cruz · Seguridad Operacional</span>
+                  </div>
+                  <span class="gps-feed-item__timestamp">11:58</span>
+                </div>
+
+                <div class="gps-feed-item">
+                  <span class="gps-feed-item__dot gps-feed-item__dot--active"></span>
+                  <div class="gps-feed-item__info">
+                    <span class="gps-feed-item__name">TRS-TRP-008 — Activo</span>
+                    <span class="gps-feed-item__sub">Cochabamba · Transporte Especializado</span>
+                  </div>
+                  <span class="gps-feed-item__timestamp">11:47</span>
+                </div>
+
+                <div class="gps-feed-item">
+                  <span class="gps-feed-item__dot gps-feed-item__dot--idle"></span>
+                  <div class="gps-feed-item__info">
+                    <span class="gps-feed-item__name">TRS-OUT-021 — En espera</span>
+                    <span class="gps-feed-item__sub">Oruro · Outsourcing Corporativo</span>
+                  </div>
+                  <span class="gps-feed-item__timestamp">11:30</span>
+                </div>
+
+              </div>
+              <!-- /gps-feed -->
+
+            </div>
+            <!-- /tech-panel -->
+          </div>
+
+        </div>
+        <!-- /tech-layout -->
+      </div>
+    </section>
+    <!-- /tech-section -->
+
+    <!-- ======================================================================
+         STATISTICS SECTION
+         ====================================================================== -->
+    <section class="stats-section" id="estadisticas" aria-labelledby="stats-title">
+      <div class="container">
+
+        <header class="section-header section-header--center reveal">
+          <div class="section-header__badge">
+            <span class="badge badge--glass">Números TRS+</span>
+          </div>
+          <h2 class="sr-only" id="stats-title">Estadísticas operacionales TRS+ Bolivia</h2>
+        </header>
+
+        <div class="stats-grid reveal-stagger">
+
+          <div class="stat-block">
+            <span class="stat-block__value stat-block__value--accent"
+                  data-counter="15" data-suffix="+">15+</span>
+            <span class="stat-block__label">Años de experiencia</span>
+            <span class="stat-block__sublabel">en Bolivia</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__value"
+                  data-counter="500" data-suffix="+">500+</span>
+            <span class="stat-block__label">Empresas atendidas</span>
+            <span class="stat-block__sublabel">clientes corporativos</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__value stat-block__value--success"
+                  data-counter="9" data-suffix="">9</span>
+            <span class="stat-block__label">Ciudades con cobertura</span>
+            <span class="stat-block__sublabel">a nivel nacional</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__value"
+                  data-counter="98.5" data-suffix="%">98.5%</span>
+            <span class="stat-block__label">Uptime operacional</span>
+            <span class="stat-block__sublabel">verificado</span>
+          </div>
+
+        </div>
+        <!-- /stats-grid -->
+
+      </div>
+    </section>
+    <!-- /stats-section -->
+
+    <!-- ======================================================================
+         CTA SECTION
+         ====================================================================== -->
+    <section class="cta-section" id="contacto-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta__inner reveal">
+
+          <div class="cta__badge">
+            <span class="badge badge--glass">Solicite una Consultoría</span>
+          </div>
+
+          <h2 class="cta__headline" id="cta-title">
+            ¿Listo para optimizar<br />sus operaciones?
+          </h2>
+
+          <p class="cta__description">
+            Hable con nuestros especialistas. Analizamos su operación actual
+            y diseñamos una solución integrada adaptada a sus necesidades.
+          </p>
+
+          <div class="cta__actions">
+            <a href="contacto.html" class="btn btn--white btn--lg">
+              Solicitar Consultoría Gratuita
+            </a>
+            <a href="servicios.html" class="btn btn--ghost btn--lg">
+              Explorar Servicios
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /cta-section -->
 
   </main>
 

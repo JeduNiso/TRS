@@ -207,3 +207,41 @@
   }
 
 }
+
+
+/* ============================================================================
+   SPRINT 2 — RESPONSIVE RULES
+   ============================================================================ */
+
+/* Trust section — 2 cols on tablet */
+@media (max-width: 1023px) {
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about__layout { grid-template-columns: 1fr; gap: var(--space-12); }
+  .tech-layout { grid-template-columns: 1fr; gap: var(--space-12); }
+  .about__image-stat { right: var(--space-4); }
+}
+
+@media (max-width: 767px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .industries-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .stat-block__value { font-size: var(--text-h1); }
+
+  .cta__headline { font-size: var(--text-h2); }
+  .cta__actions { flex-direction: column; align-items: center; }
+  .cta__actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+  .about__pillars { grid-template-columns: 1fr; }
+  .about__image-stat { right: var(--space-4); bottom: var(--space-4); }
+}
+
+@media (max-width: 479px) {
+  .industries-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .hero__scroll-hint { display: none; }
+}
