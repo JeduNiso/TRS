@@ -346,7 +346,7 @@
 
               <!-- Bolivia Coverage Map -->
               <div class="op-dashboard__bolivia-map">
-                <p class="op-dashboard__bolivia-map-title">Cobertura Bolivia — 9 ciudades</p>
+                <p class="op-dashboard__bolivia-map-title">Cobertura Bolivia &mdash; Red TRS+</p>
                 <svg class="bolivia-svg" viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de Bolivia con cobertura TRS+">
                   <!-- Bolivia outline (simplified) -->
                   <path d="M 58,24 L 158,18 L 218,42 L 234,88 L 226,140 L 204,175 L 148,192 L 98,190 L 62,178 L 44,152 L 28,115 L 22,68 Z"
@@ -388,19 +388,16 @@
               <!-- Key Stats -->
               <div class="op-dashboard__stats">
                 <div class="op-stat">
-                  <span class="op-stat__value op-stat__value--accent"
-                        data-counter="47" data-suffix="">47</span>
-                  <span class="op-stat__label">Operaciones</span>
+                  <span class="op-stat__value op-stat__value--accent">Activo</span>
+                  <span class="op-stat__label">Estado</span>
                 </div>
                 <div class="op-stat">
-                  <span class="op-stat__value op-stat__value--success"
-                        data-counter="98.5" data-suffix="%">98.5%</span>
-                  <span class="op-stat__label">Uptime</span>
+                  <span class="op-stat__value op-stat__value--success">$60K</span>
+                  <span class="op-stat__label">Cobertura</span>
                 </div>
                 <div class="op-stat">
-                  <span class="op-stat__value"
-                        data-counter="9" data-suffix="">9</span>
-                  <span class="op-stat__label">Ciudades</span>
+                  <span class="op-stat__value">3</span>
+                  <span class="op-stat__label">Pólizas</span>
                 </div>
               </div>
 
@@ -410,8 +407,8 @@
                 <div class="op-gps-item">
                   <span class="op-gps-indicator op-gps-indicator--active"></span>
                   <div class="op-gps-unit">
-                    TRS-MTO-017
-                    <span>La Paz → El Alto · Logística</span>
+                    TRS-SEC-017
+                    <span>La Paz → El Alto · Secure Transit</span>
                   </div>
                   <span class="op-gps-time">12:04</span>
                 </div>
@@ -419,8 +416,8 @@
                 <div class="op-gps-item">
                   <span class="op-gps-indicator op-gps-indicator--transit"></span>
                   <div class="op-gps-unit">
-                    TRS-SEC-032
-                    <span>Santa Cruz · Seguridad</span>
+                    TRS-VLT-032
+                    <span>Santa Cruz · Vault Solutions</span>
                   </div>
                   <span class="op-gps-time">11:58</span>
                 </div>
@@ -428,8 +425,8 @@
                 <div class="op-gps-item">
                   <span class="op-gps-indicator op-gps-indicator--active"></span>
                   <div class="op-gps-unit">
-                    TRS-TRP-008
-                    <span>Cochabamba · Transporte</span>
+                    TRS-EXP-008
+                    <span>Cochabamba · Express &amp; Distribution</span>
                   </div>
                   <span class="op-gps-time">11:47</span>
                 </div>
@@ -437,8 +434,8 @@
                 <div class="op-gps-item">
                   <span class="op-gps-indicator op-gps-indicator--idle"></span>
                   <div class="op-gps-unit">
-                    TRS-OUT-021
-                    <span>Oruro · Outsourcing</span>
+                    TRS-LOG-021
+                    <span>Oruro · Strategic Logistics</span>
                   </div>
                   <span class="op-gps-time">11:30</span>
                 </div>
@@ -491,13 +488,24 @@
           <article class="feature-card">
             <div class="feature-card__icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
             </div>
-            <div class="feature-card__value">24/7</div>
-            <h3 class="feature-card__title">Disponibilidad Continua</h3>
-            <p class="feature-card__description">Operaciones ininterrumpidas los 365 días del año. Nuestro equipo está disponible cuando usted lo necesita.</p>
+            <div class="feature-card__value">Triple</div>
+            <h3 class="feature-card__title">Anillo de Seguridad</h3>
+            <p class="feature-card__description">Cada operación opera bajo un triple nivel de protección: Póliza 3D de Fidelidad Funcionaria, Seguro de Transporte y Seguro de Custodia.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">$60K</div>
+            <h3 class="feature-card__title">Cobertura por Evento</h3>
+            <p class="feature-card__description">Seguro de transporte de hasta $us. 60,000 por evento. Su carga protegida contra pérdidas, daños materiales o averías durante el traslado.</p>
           </article>
 
           <article class="feature-card">
@@ -507,46 +515,9 @@
                 <circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
-            <div class="feature-card__value">9+</div>
-            <h3 class="feature-card__title">Ciudades con Cobertura</h3>
-            <p class="feature-card__description">Presencia operacional en los principales centros económicos y comerciales de Bolivia.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <div class="feature-card__value">100%</div>
-            <h3 class="feature-card__title">Operaciones Aseguradas</h3>
-            <p class="feature-card__description">Toda operación cubierta con seguro corporativo. Su carga, activos y personal protegidos en todo momento.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="18" y1="20" x2="18" y2="10"/>
-                <line x1="12" y1="20" x2="12" y2="4"/>
-                <line x1="6" y1="20" x2="6" y2="14"/>
-              </svg>
-            </div>
-            <div class="feature-card__value">98.5%</div>
-            <h3 class="feature-card__title">Uptime Operacional</h3>
-            <p class="feature-card__description">Índice de disponibilidad verificado. Procesos robustos que garantizan continuidad ante cualquier contingencia.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
-              </svg>
-            </div>
             <div class="feature-card__value">GPS</div>
-            <h3 class="feature-card__title">Monitoreo en Tiempo Real</h3>
-            <p class="feature-card__description">Trazabilidad completa de cada unidad, operación y recurso mediante tecnología GPS y plataformas de monitoreo.</p>
+            <h3 class="feature-card__title">Rastreo Satelital Activo</h3>
+            <p class="feature-card__description">Monitoreo georreferenciado en tiempo real con alertas automáticas ante desvíos de ruta o paradas no autorizadas en toda la flota.</p>
           </article>
 
           <article class="feature-card">
@@ -558,9 +529,36 @@
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <div class="feature-card__value">Corp.</div>
-            <h3 class="feature-card__title">Soporte Corporativo</h3>
-            <p class="feature-card__description">Equipo especializado en soluciones corporativas. Gestionamos la complejidad operacional para que usted pueda crecer.</p>
+            <div class="feature-card__value">100%</div>
+            <h3 class="feature-card__title">Cobertura de Personal</h3>
+            <p class="feature-card__description">TRS+ Talent Outsourcing garantiza el 100% de cobertura operativa frente a bajas médicas, licencias y vacaciones. Su operación no se detiene.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M8.46 8.46a5 5 0 0 0 0 7.07"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">Multi</div>
+            <h3 class="feature-card__title">Comunicación Permanente</h3>
+            <p class="feature-card__description">Canales redundantes de radio y datos Base-Vehículo y Vehículo-Vehículo para coordinación táctica inmediata ante cualquier contingencia.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <div class="feature-card__value">7</div>
+            <h3 class="feature-card__title">Líneas de Servicio TRS+</h3>
+            <p class="feature-card__description">Ecosistema de 7 líneas especializadas bajo la marca TRS+ para cubrir toda la complejidad logística, operativa y de personal de su empresa.</p>
           </article>
 
         </div>
@@ -604,11 +602,6 @@
                 <span class="about__image-placeholder-text">Foto TRS+ Bolivia</span>
               </div>
             </div>
-            <!-- Floating stat badge -->
-            <div class="about__image-stat" aria-label="Años de experiencia operacional">
-              <span class="about__image-stat-value">15+</span>
-              <span class="about__image-stat-label">Años de<br/>experiencia</span>
-            </div>
             <div class="about__image-accent" aria-hidden="true"></div>
           </div>
 
@@ -625,31 +618,33 @@
             </header>
 
             <p class="about__lead">
-              TRS+ Bolivia SRL no es una empresa de transporte ni de outsourcing.
-              Somos un socio estratégico especializado en continuidad operacional,
-              diseñado para empresas que no pueden permitirse detenerse.
+              TRS+ Bolivia SRL es un operador de servicios integrales de vanguardia,
+              enfocado en resolver las complejidades logísticas, operativas y de personal
+              de las empresas. Evolucionamos de ser estructuradores de ideas a ejecutores
+              absolutos de soluciones de alto nivel, mitigando riesgos operativos mediante
+              un ecosistema corporativo confiable, tecnológico y de pronta respuesta.
             </p>
 
             <div class="about__pillars">
 
               <div class="about__pillar">
-                <span class="about__pillar-label">Misión</span>
-                <p class="about__pillar-text">Optimizar las operaciones de nuestros clientes a través de soluciones integradas, confiables y tecnológicamente avanzadas.</p>
+                <span class="about__pillar-label">Compromiso Absoluto</span>
+                <p class="about__pillar-text">Nos involucramos al máximo en cada interacción para co-diseñar soluciones precisas a la medida de su organización.</p>
               </div>
 
               <div class="about__pillar">
-                <span class="about__pillar-label">Visión</span>
-                <p class="about__pillar-text">Ser la empresa de soluciones operacionales más confiable de Bolivia, reconocida por su excelencia y capacidad de ejecución.</p>
+                <span class="about__pillar-label">Profesionalismo Riguroso</span>
+                <p class="about__pillar-text">Implementamos las mejores prácticas globales del sector con atención al detalle y enfoque estricto en metas cuantificables.</p>
               </div>
 
               <div class="about__pillar">
-                <span class="about__pillar-label">Compromiso</span>
-                <p class="about__pillar-text">Entregamos resultados medibles. Cada operación se planifica, ejecuta y reporta con estándares corporativos de primer nivel.</p>
+                <span class="about__pillar-label">Flexibilidad Dinámica</span>
+                <p class="about__pillar-text">Respuesta inmediata y adaptación continua ante los entornos cambiantes y los desafíos emergentes de su negocio.</p>
               </div>
 
               <div class="about__pillar">
-                <span class="about__pillar-label">Valores</span>
-                <p class="about__pillar-text">Confiabilidad, eficiencia, transparencia y excelencia operacional guían cada decisión que tomamos por nuestros clientes.</p>
+                <span class="about__pillar-label">Trabajo en Equipo</span>
+                <p class="about__pillar-text">Sinergia operativa fundamentada en la experiencia cruzada para asegurar la continuidad ininterrumpida de su negocio.</p>
               </div>
 
             </div>
@@ -690,51 +685,50 @@
           <article class="service-card service-card--featured">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="1" y="3" width="15" height="13" rx="1"/>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                <circle cx="5.5" cy="18.5" r="2.5"/>
-                <circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">Logística Corporativa</h3>
-            <p class="service-card__description">Diseño, planificación y ejecución de cadenas logísticas eficientes. Movemos sus activos con precisión, trazabilidad y cumplimiento.</p>
-            <a href="servicios.html#logistica" class="service-card__link">
-              Explorar servicio
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">Transporte Especializado</h3>
-            <p class="service-card__description">Flota corporativa para transporte de personal, carga especial y operaciones en zonas remotas o de difícil acceso.</p>
-            <a href="servicios.html#transporte" class="service-card__link">
-              Explorar servicio
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <polyline points="9 12 11 14 15 10"/>
+                <path d="M12 8v4l2 2"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Seguridad Operacional</h3>
-            <p class="service-card__description">Protección integral de activos, personal e instalaciones. Seguridad privada, monitoreo y protocolos de respuesta inmediata.</p>
-            <a href="servicios.html#seguridad" class="service-card__link">
+            <h3 class="service-card__title">TRS+ Secure Transit</h3>
+            <p class="service-card__description">Solución express de máxima seguridad para el traslado de flujos de efectivo, documentos de valor y activos críticos. Personal especializado en manejo de valores, con cobertura inter-sucursales y nodos financieros.</p>
+            <a href="servicios.html#secure-transit" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="5" y="11" width="14" height="10" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">TRS+ Vault Solutions</h3>
+            <p class="service-card__description">Almacenamiento protegido y administración de valores en entornos de alta seguridad. Custodia física en bóvedas y sucursales propias de TRS+, equipadas con cajas fuertes certificadas.</p>
+            <a href="servicios.html#vault-solutions" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">TRS+ Express &amp; Distribution</h3>
+            <p class="service-card__description">Gestión logística capilar de documentos, encomiendas, mercadería e insumos industriales. Cobertura local y nacional con servicio Puerta a Puerta y Lead Times garantizados.</p>
+            <a href="servicios.html#express" class="service-card__link">
               Explorar servicio
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
@@ -752,9 +746,9 @@
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Outsourcing Corporativo</h3>
-            <p class="service-card__description">Gestión integral de funciones operacionales no core: administración de personal, servicios generales y soporte especializado.</p>
-            <a href="servicios.html#outsourcing" class="service-card__link">
+            <h3 class="service-card__title">TRS+ Talent Outsourcing</h3>
+            <p class="service-card__description">Externalización estratégica de capital humano con responsabilidad total en reclutamiento, capacitación y administración laboral. Cobertura del 100% ante bajas médicas, licencias o vacaciones.</p>
+            <a href="servicios.html#talent-outsourcing" class="service-card__link">
               Explorar servicio
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
@@ -766,36 +760,34 @@
           <article class="service-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="18" y1="20" x2="18" y2="10"/>
-                <line x1="12" y1="20" x2="12" y2="4"/>
-                <line x1="6" y1="20" x2="6" y2="14"/>
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              </svg>
-            </div>
-            <h3 class="service-card__title">Monitoreo GPS</h3>
-            <p class="service-card__description">Plataforma de rastreo y monitoreo en tiempo real para flotas, activos y operaciones. Visibilidad completa desde cualquier dispositivo.</p>
-            <a href="servicios.html#monitoreo" class="service-card__link">
-              Explorar servicio
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                 <circle cx="12" cy="12" r="3"/>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-                <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-                <path d="M8.46 8.46a5 5 0 0 0 0 7.07"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Gestión de Flota</h3>
-            <p class="service-card__description">Administración completa de flotas vehiculares: mantenimiento, documentación, control de combustible y optimización de rutas.</p>
-            <a href="servicios.html#flota" class="service-card__link">
+            <h3 class="service-card__title">TRS+ Quality Audit</h3>
+            <p class="service-card__description">Auditoría de calidad encubierta (Mystery Shopping) con personal entrenado y tecnología avanzada de registro audiovisual. Informes gerenciales de desempeño como respaldo inalterable.</p>
+            <a href="servicios.html#quality-audit" class="service-card__link">
+              Explorar servicio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"/>
+                <circle cx="6" cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">TRS+ Strategic Logistics</h3>
+            <p class="service-card__description">Consultoría táctica y reingeniería de procesos logísticos corporativos. Ingenieros especializados como socios estratégicos para transformar ineficiencias en ventajas competitivas duraderas.</p>
+            <a href="servicios.html#strategic-logistics" class="service-card__link">
               Explorar servicio
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"/>
@@ -828,11 +820,11 @@
             <span class="badge badge--glass">Sectores</span>
           </div>
           <h2 class="section-header__title" id="industries-title">
-            Industrias que confían en TRS+
+            Sectores que operamos
           </h2>
           <p class="section-header__description">
-            Presencia en los sectores más exigentes de Bolivia.
-            Experiencia que se traduce en soluciones adaptadas a cada industria.
+            TRS+ atiende a grandes corporaciones e instituciones de alta exigencia
+            en los sectores económicos más demandantes de Bolivia.
           </p>
         </header>
 
@@ -846,19 +838,18 @@
               </svg>
             </div>
             <h3 class="industry-card__name">Banca y Finanzas</h3>
-            <p class="industry-card__description">Transporte de valores, seguridad bancaria y logística especializada para el sector financiero.</p>
+            <p class="industry-card__description">Transporte seguro de valores, custodia en bóvedas certificadas y logística especializada para nodos financieros e inter-sucursales.</p>
           </article>
 
           <article class="industry-card">
             <div class="industry-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                <polyline points="2 17 12 22 22 17"/>
-                <polyline points="2 12 12 17 22 12"/>
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
               </svg>
             </div>
-            <h3 class="industry-card__name">Minería</h3>
-            <p class="industry-card__description">Soporte operacional completo para proyectos mineros en zonas remotas: logística, transporte y seguridad.</p>
+            <h3 class="industry-card__name">Corporativo y Empresarial</h3>
+            <p class="industry-card__description">Soluciones integradas para grandes corporaciones: outsourcing de personal, logística estratégica y auditorías de calidad operacional.</p>
           </article>
 
           <article class="industry-card">
@@ -869,67 +860,21 @@
                 <path d="M16 10a4 4 0 0 1-8 0"/>
               </svg>
             </div>
-            <h3 class="industry-card__name">Retail y Comercio</h3>
-            <p class="industry-card__description">Distribución, cadena de frío, outsourcing comercial y seguridad para cadenas de retail a nivel nacional.</p>
+            <h3 class="industry-card__name">Retail y Distribución</h3>
+            <p class="industry-card__description">Distribución capilar de mercadería terminada e insumos industriales. Cobertura local y nacional con Lead Times garantizados.</p>
           </article>
 
           <article class="industry-card">
             <div class="industry-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+                <line x1="2" y1="20" x2="22" y2="20"/>
               </svg>
             </div>
-            <h3 class="industry-card__name">Gobierno e Instituciones</h3>
-            <p class="industry-card__description">Servicios de apoyo operacional, transporte institucional y logística para entidades gubernamentales y públicas.</p>
-          </article>
-
-          <article class="industry-card">
-            <div class="industry-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
-            </div>
-            <h3 class="industry-card__name">Salud</h3>
-            <p class="industry-card__description">Transporte especializado de equipos médicos, cadena de frío farmacéutica y logística hospitalaria.</p>
-          </article>
-
-          <article class="industry-card">
-            <div class="industry-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-              </svg>
-            </div>
-            <h3 class="industry-card__name">Manufactura</h3>
-            <p class="industry-card__description">Gestión de supply chain, distribución industrial y soporte operacional para plantas de manufactura.</p>
-          </article>
-
-          <article class="industry-card">
-            <div class="industry-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <line x1="9" y1="3" x2="9" y2="21"/>
-                <line x1="15" y1="3" x2="15" y2="21"/>
-                <line x1="3" y1="9" x2="21" y2="9"/>
-                <line x1="3" y1="15" x2="21" y2="15"/>
-              </svg>
-            </div>
-            <h3 class="industry-card__name">Construcción</h3>
-            <p class="industry-card__description">Transporte de maquinaria pesada, materiales de construcción y personal en proyectos de infraestructura.</p>
-          </article>
-
-          <article class="industry-card">
-            <div class="industry-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 22V12"/>
-                <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
-                <circle cx="12" cy="5" r="3"/>
-                <path d="M6.168 18.849a4 4 0 0 0 11.664 0"/>
-              </svg>
-            </div>
-            <h3 class="industry-card__name">Agro-industria</h3>
-            <p class="industry-card__description">Logística agroindustrial, transporte de cosechas, cadena de frío y distribución de insumos del agro.</p>
+            <h3 class="industry-card__name">Instituciones de Alta Exigencia</h3>
+            <p class="industry-card__description">Soporte operacional para instituciones públicas y privadas que demandan los más altos estándares de seguridad, confidencialidad y continuidad.</p>
           </article>
 
         </div>
@@ -1091,8 +1036,8 @@
                 <div class="gps-feed-item">
                   <span class="gps-feed-item__dot gps-feed-item__dot--active"></span>
                   <div class="gps-feed-item__info">
-                    <span class="gps-feed-item__name">TRS-MTO-017 — Activo</span>
-                    <span class="gps-feed-item__sub">La Paz → El Alto · Logística Corporativa</span>
+                    <span class="gps-feed-item__name">TRS-SEC-017 &mdash; Activo</span>
+                    <span class="gps-feed-item__sub">La Paz → El Alto · TRS+ Secure Transit</span>
                   </div>
                   <span class="gps-feed-item__timestamp">12:04</span>
                 </div>
@@ -1100,8 +1045,8 @@
                 <div class="gps-feed-item">
                   <span class="gps-feed-item__dot gps-feed-item__dot--transit"></span>
                   <div class="gps-feed-item__info">
-                    <span class="gps-feed-item__name">TRS-SEC-032 — En tránsito</span>
-                    <span class="gps-feed-item__sub">Santa Cruz · Seguridad Operacional</span>
+                    <span class="gps-feed-item__name">TRS-VLT-032 &mdash; En tránsito</span>
+                    <span class="gps-feed-item__sub">Santa Cruz · TRS+ Vault Solutions</span>
                   </div>
                   <span class="gps-feed-item__timestamp">11:58</span>
                 </div>
@@ -1109,8 +1054,8 @@
                 <div class="gps-feed-item">
                   <span class="gps-feed-item__dot gps-feed-item__dot--active"></span>
                   <div class="gps-feed-item__info">
-                    <span class="gps-feed-item__name">TRS-TRP-008 — Activo</span>
-                    <span class="gps-feed-item__sub">Cochabamba · Transporte Especializado</span>
+                    <span class="gps-feed-item__name">TRS-EXP-008 &mdash; Activo</span>
+                    <span class="gps-feed-item__sub">Cochabamba · TRS+ Express &amp; Distribution</span>
                   </div>
                   <span class="gps-feed-item__timestamp">11:47</span>
                 </div>
@@ -1118,8 +1063,8 @@
                 <div class="gps-feed-item">
                   <span class="gps-feed-item__dot gps-feed-item__dot--idle"></span>
                   <div class="gps-feed-item__info">
-                    <span class="gps-feed-item__name">TRS-OUT-021 — En espera</span>
-                    <span class="gps-feed-item__sub">Oruro · Outsourcing Corporativo</span>
+                    <span class="gps-feed-item__name">TRS-LOG-021 &mdash; En espera</span>
+                    <span class="gps-feed-item__sub">Oruro · TRS+ Strategic Logistics</span>
                   </div>
                   <span class="gps-feed-item__timestamp">11:30</span>
                 </div>
@@ -1153,31 +1098,30 @@
         <div class="stats-grid reveal-stagger">
 
           <div class="stat-block">
-            <span class="stat-block__value stat-block__value--accent"
-                  data-counter="15" data-suffix="+">15+</span>
-            <span class="stat-block__label">Años de experiencia</span>
-            <span class="stat-block__sublabel">en Bolivia</span>
+            <span class="stat-block__value stat-block__value--accent">$60K</span>
+            <span class="stat-block__label">Cobertura por evento</span>
+            <span class="stat-block__sublabel">Seguro de transporte TRS+</span>
           </div>
 
           <div class="stat-block">
             <span class="stat-block__value"
-                  data-counter="500" data-suffix="+">500+</span>
-            <span class="stat-block__label">Empresas atendidas</span>
-            <span class="stat-block__sublabel">clientes corporativos</span>
+                  data-counter="7" data-suffix="">7</span>
+            <span class="stat-block__label">Líneas de servicio</span>
+            <span class="stat-block__sublabel">Ecosistema TRS+</span>
           </div>
 
           <div class="stat-block">
             <span class="stat-block__value stat-block__value--success"
-                  data-counter="9" data-suffix="">9</span>
-            <span class="stat-block__label">Ciudades con cobertura</span>
-            <span class="stat-block__sublabel">a nivel nacional</span>
+                  data-counter="3" data-suffix="">3</span>
+            <span class="stat-block__label">Pólizas activas</span>
+            <span class="stat-block__sublabel">por operación</span>
           </div>
 
           <div class="stat-block">
             <span class="stat-block__value"
-                  data-counter="98.5" data-suffix="%">98.5%</span>
-            <span class="stat-block__label">Uptime operacional</span>
-            <span class="stat-block__sublabel">verificado</span>
+                  data-counter="100" data-suffix="%">100%</span>
+            <span class="stat-block__label">Cobertura de personal</span>
+            <span class="stat-block__sublabel">Talent Outsourcing</span>
           </div>
 
         </div>
@@ -1290,11 +1234,13 @@
         <div class="footer__col">
           <h3 class="footer__col-title">Servicios</h3>
           <ul class="footer__link-list" role="list">
-            <li><a href="servicios.html#logistica"   class="footer__link">Logística Corporativa</a></li>
-            <li><a href="servicios.html#transporte"  class="footer__link">Transporte Especializado</a></li>
-            <li><a href="servicios.html#seguridad"   class="footer__link">Seguridad Operacional</a></li>
-            <li><a href="servicios.html#outsourcing" class="footer__link">Outsourcing</a></li>
-            <li><a href="servicios.html#tecnologia"  class="footer__link">Soluciones Tecnológicas</a></li>
+            <li><a href="servicios.html#secure-transit"      class="footer__link">TRS+ Secure Transit</a></li>
+            <li><a href="servicios.html#vault-solutions"     class="footer__link">TRS+ Vault Solutions</a></li>
+            <li><a href="servicios.html#express"             class="footer__link">TRS+ Express &amp; Distribution</a></li>
+            <li><a href="servicios.html#talent-outsourcing"  class="footer__link">TRS+ Talent Outsourcing</a></li>
+            <li><a href="servicios.html#quality-audit"       class="footer__link">TRS+ Quality Audit</a></li>
+            <li><a href="servicios.html#strategic-logistics" class="footer__link">TRS+ Strategic Logistics</a></li>
+            <li><a href="servicios.html#asset-recovery"      class="footer__link">TRS+ Asset Recovery</a></li>
           </ul>
         </div>
 
